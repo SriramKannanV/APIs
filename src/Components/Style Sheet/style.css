@@ -1,0 +1,144 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+
+*{
+    font-family: "Inter", sans-serif;
+    box-sizing: border-box;
+    /* overflow-x: hidden; */
+}
+:root{
+    --bg: #0F172A;
+    --cards: #1E293B;
+    --primary-accent: #38BDF8;
+    --text-primary: #F8FAFC;
+    --text-secondary: #94A3B8;
+}
+.button{
+    outline: none;
+    border: none;
+    background-color: var(--bg);
+    color: var(--text-primary);
+    transition: background-color 300ms ease-in-out;
+}
+.button:hover{
+    background-color: var(--primary-accent);
+}
+.link{
+    cursor: pointer;
+    color: var(--text-primary);
+    text-decoration: none;
+    transition: color 150ms ease-in-out;
+}
+.link:hover{
+    color: var(--primary-accent);
+}
+.text-dec-none{
+    text-decoration: none;
+    color: var(--text-primary);
+}
+.pr{
+    padding-right: 4px;
+}
+.fs-7{
+    font-size: 14px;
+}
+.p-bottom{
+    padding-bottom: 180px;
+}
+.custom-circle-true{
+    height: 15px;
+    width: 15px;
+    background-color: var(--primary-accent);
+    border-radius: 50%;
+}
+.custom-circle-false{
+    height: 15px;
+    width: 15px;
+    background-color: none;
+    border-radius: 50%;
+    border: 2px solid var(--primary-accent);
+}
+
+/* navbar */
+
+@media (max-width: 767.98px){
+#navMenu{
+    width: 100px;
+    background-color: var(--bg);
+    padding: 8px 32px;
+    border-radius: 8px;
+    text-align: end;
+}
+#navMenu li{
+    padding: 8px 0;
+}
+}
+
+.nav{
+    height: 80px;
+    width: 100%;
+    background-color: var(--cards);
+    color: var(--text-primary);
+}
+
+/* Hero Section */
+
+.hero h1{
+    font-size: 48px;
+}
+
+/* footer */
+
+.footer{
+    background-color: var(--cards);
+    color: var(--text-primary);
+}
+.rights{
+    background-color: var(--bg);
+}
+
+/* post section */
+
+.post{
+    height: auto;
+    width: 384px;
+    background-color: var(--cards);
+    color: var(--text-primary);
+}
+.post-disc{
+    color: var(--text-secondary);
+}
+.post-img{
+    height: 247px;
+    width: 100%;
+    background-color: #F8FAFC;
+}
+.post-tags p{
+    font-size: 14px;
+    color: var(--text-secondary);
+}
+
+/* Todos section */
+
+.todos-card{
+    height: 80px;
+    background-color: var(--bg);
+    color: var(--text-primary);
+}
+
+/* User section */
+
+.user{
+    height: 282px;
+    width: 282px;
+    background-color: var(--cards);
+    color: var(--text-primary);
+}
+.user-dp{
+    height: 60px;
+    width: 60px;
+    background-color: var(--text-primary);
+    border-radius: 50%;
+}
+.user-dp img{
+    border-radius: 50%;
+}
