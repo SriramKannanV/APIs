@@ -19,7 +19,7 @@ const User = () => {
     <div>
       <Navbar />
 
-      <div className='container px-5 px-md-0'>
+      <div className='container px-3 px-md-0'>
         <h4 className='fw-bold my-4'>User</h4>
 
         <div className='d-flex flex-wrap gap-5 p-bottom mb-5'>

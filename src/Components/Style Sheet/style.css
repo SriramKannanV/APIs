@@ -45,14 +45,14 @@
     padding-bottom: 180px;
 }
 .custom-circle-true{
-    height: 15px;
-    width: 15px;
+    min-height: 15px;
+    min-width: 15px;
     background-color: var(--primary-accent);
     border-radius: 50%;
 }
 .custom-circle-false{
-    height: 15px;
-    width: 15px;
+    min-height: 15px;
+    min-width: 15px;
     background-color: none;
     border-radius: 50%;
     border: 2px solid var(--primary-accent);
@@ -100,7 +100,8 @@
 
 .post{
     height: auto;
-    width: 384px;
+    /* min-width: 354px; */
+    max-width: 385px;
     background-color: var(--cards);
     color: var(--text-primary);
 }

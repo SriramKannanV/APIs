@@ -22,7 +22,7 @@ const Posts = () => {
     <div>
       <Navbar/>
 
-      <div className='px-5 px-md-0'>
+      <div className='px-1 px-md-0'>
       <h4 className='container fw-bold my-4'>Posts</h4>
         <div className='container my-4 d-flex flex-wrap gap-5 p-bottom'>
 
@@ -30,7 +30,7 @@ const Posts = () => {
               posts.map((post) => {
               return (<div key={post.id} className='post rounded p-3 shadow'>
               <div>
-                <h5 className='mb-0 fw-bolder'>{post.title.length > 30 ? `${post.title.substring(1, 30)}...` : post.title}</h5>
+                <h5 className='mb-0 fw-bolder'>{post.title.length > 28 ? `${post.title.substring(1, 28)}...` : post.title}</h5>
                 <p className='post-disc'>{post.body.length > 75 ? `${post.body.substring(0, 75)}...` : post.body}</p>
               </div>
               <div className='post-img rounded'>

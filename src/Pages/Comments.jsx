@@ -24,7 +24,7 @@ const Comments = () => {
     <div>
       <Navbar />
 
-      <div className='container p-bottom px-5 px-md-0'>
+      <div className='container p-bottom px-3 px-md-0'>
         <h4 className='fw-bold my-4' >Comments</h4>
 
       {comment.length === 0 ? (<p>Loading Comments...</p>) : (

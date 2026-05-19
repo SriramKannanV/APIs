@@ -25,9 +25,9 @@ const Todos = () => {
 
           {todos.length === 0 ? (<p>Loading Todos</p>) : (
             todos.map(todo => {
-              return (<div className='d-flex gap-2 px-4 align-items-center todos-card rounded mb-3 shadow'>
+              return (<div key={todo.id} className='d-flex gap-2 px-4 align-items-center todos-card rounded mb-3 shadow'>
                 <div className={todo.completed ? 'custom-circle-true' : 'custom-circle-false'}></div>
-                <h5 className={todo.completed ? 'mb-0 fw-normal text-decoration-line-through text-secondary' : 'mb-0 fw-normal'}>{todo.todo}</h5>
+                <h5 className={todo.completed ? 'mb-0 fw-normal text-decoration-line-through text-secondary' : 'mb-0 fw-normal'}>{todo.todo.length > 40 ? `${todo.todo.substring(1, 40)}...` : todo.todo}</h5>
               </div>)
             })
           )}

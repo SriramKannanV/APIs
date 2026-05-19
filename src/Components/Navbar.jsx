@@ -5,8 +5,8 @@ const Navbar = () => {
     <nav className='nav sticky-top navbar navbar-expand-md'>
       <div className='container'>
           <Link to="/" className='fw-bold mb-0 link fs-3'>[ API ] Placeholder</Link>
-          <button class="navbar-toggler shadow-none border-0" type="button" data-bs-theme="dark" data-bs-toggle="collapse" data-bs-target="#navMenu" aria-controls="navMenu" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon toggle-btn"></span>
+          <button className="navbar-toggler shadow-none border-0" type="button" data-bs-theme="dark" data-bs-toggle="collapse" data-bs-target="#navMenu" aria-controls="navMenu" aria-expanded="false" aria-label="Toggle navigation">
+            <span className="navbar-toggler-icon toggle-btn"></span>
           </button>
           <div className="collapse navbar-collapse" id="navMenu">
             <ul className='d-flex gap-md-5 mb-0 navbar-nav flex-column flex-md-row gap-3 gap-md-5 ms-auto'>
