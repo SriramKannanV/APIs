@@ -23,7 +23,7 @@ const Posts = () => {
         const postData = await postRes.json();
         await setPosts(postData.posts);
 
-        const imgRes = await fetch("https://picsum.photos/360/250");
+        const imgRes = await fetch("https://picsum.photos/200");
         await setImg(imgRes.url);
       } catch (error) {
         console.log(error);
@@ -49,7 +49,7 @@ const Posts = () => {
                 <p className='post-disc'>{post.body.length > 75 ? `${post.body.substring(0, 75)}...` : post.body}</p>
               </div>
               <div className='post-img rounded overflow-hidden'>
-                {img === "" ? (<p className='text-black p-2'>Loading Image...</p>) : (<img alt="posts" src={img} />)}
+                {img === "" ? (<p className='text-black p-2'>Loading Image...</p>) : (<img className='w-100 h-100' alt="posts" src={img} />)}
               </div>
               <div className='d-flex my-2 gap-5'>
                 <div className='d-flex gap-1'>
