@@ -10,12 +10,27 @@ const Posts = () => {
   let url = "https://dummyjson.com/posts";
 
   const [posts, setPosts] = useState([]);
+  const [img, setImg] = useState("")
+
+  // useEffect(() => {
+    
+  // }, [])
 
   useEffect(() =>{
-    fetch(url)
-      .then(res => res.json())
-      .then(data => setPosts(data.posts))
-      .catch(err => console.log(err))
+    const fetchData = async () => {
+      try {
+        const postRes = await fetch(url);
+        const postData = await postRes.json();
+        await setPosts(postData.posts);
+
+        const imgRes = await fetch("https://picsum.photos/360/250");
+        await setImg(imgRes.url);
+      } catch (error) {
+        console.log(error);
+      }
+    }
+
+    fetchData();
   }, [])
 
   return (
@@ -33,8 +48,8 @@ const Posts = () => {
                 <h5 className='mb-0 fw-bolder'>{post.title.length > 28 ? `${post.title.substring(1, 28)}...` : post.title}</h5>
                 <p className='post-disc'>{post.body.length > 75 ? `${post.body.substring(0, 75)}...` : post.body}</p>
               </div>
-              <div className='post-img rounded'>
-                <img alt="posts" />
+              <div className='post-img rounded overflow-hidden'>
+                {img === "" ? (<p className='text-black p-2'>Loading Image...</p>) : (<img alt="posts" src={img} />)}
               </div>
               <div className='d-flex my-2 gap-5'>
                 <div className='d-flex gap-1'>

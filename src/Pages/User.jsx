@@ -24,7 +24,7 @@ const User = () => {
 
         <div className='d-flex flex-wrap gap-5 p-bottom mb-5'>
 
-          {user === 0 ? <p>Loading Users...</p> : (
+          {user.length === 0 ? <p>Loading Users...</p> : (
             user.map((item => {
               return (
               <div key={item.id}>
